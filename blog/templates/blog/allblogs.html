@@ -72,10 +72,9 @@
       <div class="mb-1 text-muted">{{ blog.pub_date_pretty }}</div>
       <img class="img-fluid rounded" src="{{ blog.image.url }}" alt="Responsive image"/>
       <p class="card-text mb-auto">{{ blog.summary }}</p>
-      <a href="{% url 'blog' blog.id %}" class="stretched-link">Continue reading</a>
+      <a href="{% url 'detail' blog.id %}">Continue reading</a>
       {% endfor %}
     </div>
-
   </main>
 
   <footer class="text-muted">
