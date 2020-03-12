@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
-
 {% block content %}
 
-  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark mt-2">
+  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark mt-3">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">Hi, I am KOKCHEN.</h1>
-      <p class="lead my-3">Hey, my name is KOKCHEN CHAN and this is my first blog. Hope you will enjoy it!</p>
+      <h1 class="display-4 font-italic">Hello! My name is Chan Kok Chen</h1>
+      <p class="lead my-3">"I love design stuff, like websites and apps, and am looking for more opportunities to work on a freelance basis."</p>
       <p class="lead mb-0"><a href="mailto:kokchen2014@outlook.com" class="btn btn-primary my-2 text-white font-weight-bold">Email me</a></p>
     </div>
   </div>
@@ -14,7 +13,7 @@
   <div class="album py-5 bg-light">
     <div class="container">
       <div class="row">
-        {% for job in jobs.all %}
+        {% for job in jobs.object_list %}
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
               <img class="card-img-top" src="{{ job.image.url }}" />
@@ -28,5 +27,23 @@
         {% endfor %}
       </div>
     </div>
+
+    <nav class="container fixed-bottom">
+      <ul class="pagination justify-content-end">
+        {% if jobs.has_previous %}
+          <li class="page-item"><a class="page-link" href="?page={{ blogs.previous_page_number }}">Previous</a></li>
+        {% endif %}
+        {% for pg in jobs.paginator.page_range %}
+          {% if jobs.number == pg %}
+            <li class="page-item active" ><a class="page-link" href="?page={{ pg }}">{{ pg }}</a></li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ pg }}">{{ pg }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if jobs.has_next %}
+          <li class="page-item"><a class="page-link" href="?page={{ blogs.next_page_number }}">Next</a></li>
+        {% endif %}
+      </ul>
+    </nav>
   </div>
 {% endblock %}
