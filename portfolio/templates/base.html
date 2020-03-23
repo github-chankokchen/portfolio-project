@@ -69,7 +69,7 @@
             </select>
           </form>
           <span class="text-muted">|</span>
-          <a class="nav-item text-muted btn-sm" href="javascript:{document.getElementById('madarin').submit()}" >中文</a>
+          <a class="nav-item text-muted btn-sm" href="javascript:{document.getElementById('madarin').submit()}" >汉</a>
           <form id="madarin" method="POST" action="{% url 'set_language' %}" >
             {% csrf_token %}
             <input type="hidden" value="{{ redirect_to }}"/>
