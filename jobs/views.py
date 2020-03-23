@@ -1,8 +1,18 @@
 from django.shortcuts import render
 from .models import Job
 from django.core.paginator import Paginator, EmptyPage, InvalidPage
+from django.utils.translation import gettext as _
 
 def home(request):
+
+    # from django.utils import translation
+    # user_language = 'zh-cn'
+    # translation.activate(user_language)
+    # request.session[translation.LANGUAGE_SESSION_KEY] = user_language
+
+    # if translation.LANGUAGE_SESSION_KEY in request.session:
+    #    del request.session[translation.LANGUAGE_SESSION_KEY]
+
     jobs_list = Job.objects.all()
     paginator = Paginator(jobs_list,9)
 
@@ -16,4 +26,4 @@ def home(request):
     except(EmptyPage, InvalidPage):
         jobs = paginator.page(paginator.num_pages)
 
-    return render(request, 'jobs/home.html', {'jobs':jobs})
+    return render(request, 'jobs/home.html', {'jobs':jobs,})

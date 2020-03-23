@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
-
+{% load i18n %}
 {% block content %}
-
   <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark mt-3">
     <div class="col-md-6 px-0">
-      <h1 class="display-4 font-italic">Hello! My name is Chan Kok Chen</h1>
-      <p class="lead my-3">"I love design stuff, like websites and apps, and am looking for more opportunities to work on a freelance basis."</p>
-      <p class="lead mb-0"><a href="mailto:kokchen2014@outlook.com" class="btn btn-primary my-2 text-white font-weight-bold">Email me</a></p>
+      <h1 class="display-4 font-italic">{% trans 'Hello! My name is Chan Kok Chen' %}</h1>
+      <p class="lead my-3">{% trans '"I love design stuff, like websites and apps, and am looking for more opportunities to work on a freelance basis."' %}</p>
+      <p class="lead mb-0"><a href="mailto:kokchen2014@outlook.com" class="btn btn-primary my-2 text-white font-weight-bold">{% trans 'Email me' %}</a></p>
     </div>
   </div>
 

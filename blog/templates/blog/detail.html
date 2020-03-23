@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
-
-
+{% load i18n %}
 {% block content %}
 <main role="main" class="container mt-3">
   <div class="row">
@@ -15,7 +14,7 @@
       </div>
   <aside class="col-md-4 blog-sidebar">
         <div class="p-4 mb-3 bg-light rounded">
-          <h4 class="font-italic">Contact</h4>
+          <h4 class="font-italic">{% trans 'Contact' %}</h4>
           <ol class="list-unstyled mb-0">
             <li><i class="fab fa-instagram"></i><a href="https://www.instagram.com/kokchen_laughing/"> Follow on Instagram</a></li>
             <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/chankokchen"> Connect on LinkedIn</a></li>
