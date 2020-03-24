@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-03-23 06:36+0000\n"
+"POT-Creation-Date: 2020-03-24 16:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,20 +22,20 @@ msgstr ""
 msgid "Contact"
 msgstr "联系方式"
 
-#: jobs/templates/jobs/home.html:25
+#: jobs/templates/jobs/home.html:6
 msgid "Hello! My name is Chan Kok Chen"
 msgstr "哈咯!你好,我是little chen"
 
-#: jobs/templates/jobs/home.html:26
+#: jobs/templates/jobs/home.html:7
 msgid ""
 "\"I love design stuff, like websites and apps, and am looking for more "
 "opportunities to work on a freelance basis.\""
 msgstr "“我热爱网站开发和APP设计，正在寻找更多的合作机会。”"
 
-#: jobs/templates/jobs/home.html:27
+#: jobs/templates/jobs/home.html:8
 msgid "Email me"
 msgstr "发送邮件"
 
-#: portfolio/templates/base.html:62
+#: portfolio/templates/base.html:98
 msgid "Blog"
 msgstr "博客"
