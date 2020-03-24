@@ -131,7 +131,7 @@ LOCALE_PATHS = [
 
 LANGUAGES = [
     ('en', 'English'),
-    ('zh-hans', '中文'),
+    ('zh-hans', '汉'),
 ]
 
 # Static files (CSS, JavaScript, Images)
